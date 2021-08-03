@@ -10,18 +10,13 @@ const HOST = process.env.HOST;
 
 // the application
 const app = express();
-app.use(express.json());
 app.use(cors());
-app.use('api/api-auth', router);
-
-app.get('/', (req, res) => {
-  res.send('I\'m api-auth');
-});
+app.use(express.json());
+app.use('/api/auth', router);
 
 const start = async () => {
   try {
       app.listen(PORT, HOST, ()=>console.log(`running on http://${HOST}:${PORT}`));
-
   } catch (e) {
       console.log(e);
   }
