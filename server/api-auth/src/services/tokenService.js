@@ -4,9 +4,9 @@ class TokenService {
     generateToken (payload) {
         const accessToken = jwt.sign(payload, process.env.SECRET, {expiresIn: '30d'});
         return {
-            accessToken,
+            accessToken
         }
     }
 }
 
-module.exports = TokenService;
+module.exports = new TokenService();
