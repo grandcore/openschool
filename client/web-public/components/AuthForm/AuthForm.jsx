@@ -50,11 +50,11 @@ export const AuthForm = () => {
     return(
         <chakra.form
             onSubmit={(e) => {
-            onSubmit={ async (e) => {
+            onSubmit= async (e) => {
             e.preventDefault() // your login logic here
                 const data = await request(REQUEST_ROUTE + "/api/auth/auth", "POST" ,  {email: email, password: password})
                 console.log(data)
-            }}
+            }}}
             
         >
             <Stack spacing="6">
@@ -94,4 +94,7 @@ export const AuthForm = () => {
             <Button type="submit" colorScheme="blue" size="lg" fontSize="md">
                 Войти
             </Button>
-	)
+            </Stack>
+        </chakra.form>
+        )
+        }

@@ -14,6 +14,7 @@ RUN npm install
 RUN npm install framer-motion
 RUN npm install @emotion/react
 RUN npm install @emotion/styled
+RUN npm install @chakra-ui/icons
 
 # Copying source files
 COPY . /usr/src/app
