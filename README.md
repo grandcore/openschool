@@ -1,7 +1,11 @@
+
+[![License: MIT](https://img.shields.io/github/license/grandcore/openschool)](https://opensource.org/licenses/MIT)
+[![node-version](https://img.shields.io/badge/node-14-blue)](https://nodejs.org/es/blog/release/v14.0.0/)
+[![docker-compose-version](https://img.shields.io/badge/docker--compose-3.7-blue)]()
+[![docker-compose-version](https://img.shields.io/badge/db-mongo-blue)]()
+
+
 ВНИМАНИЕ!!! Временно некоторые команды `make` требуют рут пароль (работаем над решением проблемы).
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 
 # OpenSchool
 
