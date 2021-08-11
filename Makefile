@@ -3,14 +3,14 @@ THIS_FILE := $(lastword $(MAKEFILE_LIST))
 help:
 	make -pRrq  -f $(THIS_FILE) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
 build:
-	sudo docker-compose -f docker-compose.yml build $(c)
+	docker-compose -f docker-compose.yml build $(c)
 up:
-	sudo docker-compose -f docker-compose.yml up -d $(c)
+	docker-compose -f docker-compose.yml up -d $(c)
 bu:
-	sudo docker-compose -f docker-compose.yml build $(c)
-	sudo docker-compose -f docker-compose.yml up -d $(c)
+	docker-compose -f docker-compose.yml build $(c)
+	docker-compose -f docker-compose.yml up -d $(c)
 start:
-	sudo docker-compose -f docker-compose.yml start $(c)
+	docker-compose -f docker-compose.yml start $(c)
 pause:
 	docker-compose -f docker-compose.yml pause $(c)
 unpause:

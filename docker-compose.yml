@@ -196,6 +196,7 @@ services:
 
   ftp-default:
     build: ./storage/ftp-default
+    user: "1000:1000"
     restart: always
     container_name: ftp-default
     environment:
@@ -209,6 +210,7 @@ services:
 
   db-auth:
     build: ./storage/db-auth
+    user: "1000:1000"
     restart: always
     container_name: db-auth
     environment:
@@ -222,6 +224,7 @@ services:
 
   db-content:
     build: ./storage/db-content
+    user: "1000:1000"
     restart: always
     container_name: db-content
     environment:
@@ -235,6 +238,7 @@ services:
 
   db-users:
     build: ./storage/db-users
+    user: "1000:1000"
     restart: always
     container_name: db-users
     environment:
@@ -248,6 +252,7 @@ services:
 
   db-extra:
     build: ./storage/db-extra
+    user: "1000:1000"
     restart: always
     container_name: db-extra
     environment:
@@ -261,6 +266,7 @@ services:
 
   db-stuff:
     build: ./storage/db-stuff
+    user: "1000:1000"
     restart: always
     container_name: db-stuff
     environment:
